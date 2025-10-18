@@ -57,3 +57,5 @@ prisma/dev.db-journal
 
 # Optional — if using AWS credentials or secrets
 .aws/
+
+/generated/prisma
