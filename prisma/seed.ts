@@ -31,7 +31,7 @@ async function main() {
     "sales.json",
     "salesSummary.json",
     "purchases.json",
-    "purchaseSummary.json",
+    "purchasesSummary.json",
     "users.json",
     "expenses.json",
     "expenseByCategory.json",
