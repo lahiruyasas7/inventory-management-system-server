@@ -5,6 +5,7 @@ import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import { getDashboardMetrics } from "./controllers/dashboardController";
+import { getProducts } from "./controllers/productController";
 
 /* CONFIGURATIONS */
 dotenv.config();
@@ -19,6 +20,7 @@ app.use(cors());
 
 //ROUTES
 app.use("/dashboard", getDashboardMetrics);
+app.use("/products", getProducts)
 
 /* SERVER */
 const port = process.env.PORT || 3001;
