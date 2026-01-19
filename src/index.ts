@@ -4,9 +4,9 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
-import { getDashboardMetrics } from "./controllers/dashboardController";
-import { getProducts } from "./controllers/productController";
-import userRoutes from "./routes/userRoute"
+import dashboardRoute from "./routes/dashboardRoutes";
+import userRoutes from "./routes/userRoute";
+import productRoute from "./routes/productRoutes";
 
 /* CONFIGURATIONS */
 dotenv.config();
@@ -20,9 +20,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
 //ROUTES
-app.use("/dashboard", getDashboardMetrics);
-app.use("/products", getProducts);
-app.use("/users", userRoutes)
+app.use("/dashboard", dashboardRoute);
+app.use("/products", productRoute);
+app.use("/users", userRoutes);
 
 /* SERVER */
 const port = process.env.PORT || 3001;
