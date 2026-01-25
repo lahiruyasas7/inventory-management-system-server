@@ -17,6 +17,7 @@ export const getExpensesByCategory = async (
       ...item,
       amount: item.amount.toString(),
     }));
+    res.json(expensesByCategorySummary)
   } catch (error) {
     res.status(500).json({ message: "Error retrieving expenses" });
   }
